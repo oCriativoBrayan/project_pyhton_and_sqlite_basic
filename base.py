@@ -1,12 +1,13 @@
 from insert import insertData
 from delete import deleteData
+from update import updateData
 import select
 
 choosefuncition = input('write name of function: ')
 
 if choosefuncition == 'create':
         # Create variable data test
-        insert = [102,'Camiseta lacoste','XL','99.97',1,20260901,20260929]
+        insert = []
 
         #create camps with the data in the list insert
         id = int(input('Write the number id: '))
@@ -19,6 +20,23 @@ if choosefuncition == 'create':
 
         # call the function insertData with the data in the list insert
         insertData(id, name, size, price, quant, dateBuy, dateSell)
+
+elif choosefuncition == 'update':
+        # Create variable data test
+        up = []
+
+        #create camps with the data in the list insert
+        id = int(input('Write the number id: '))
+        name = input('Write the name item: ')
+        size = input('Write the size: ')
+        price = float(input('Write the price: '))
+        quantity = int(input('Write the quant: '))
+        dateBuy = input('Write the datebuy: ')
+        dateSell = input('Write the datesell: ')
+
+        # call the function insertData with the data in the list insert
+        updateData(id, name, size, price, quantity, dateBuy, dateSell)
+
 
 
 elif choosefuncition == 'selectRange':
