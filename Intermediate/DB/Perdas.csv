@@ -1,0 +1,47 @@
+﻿DATA_OCORRENCIA,SETOR_ORIGEM,DESCRICAO_MOTIVO_TEXTO_LIVRE,COD_PROD_OU_NOME,QTD_AVARIADA,VALOR_ESTIMADO_PREJUIZO,REGISTRADO_POR
+01/01/2026,DEPOSITO,Falta de mercadoria no estoque - suspeita furto,601,1.1,"R$ 14,18",Diego
+03/01/2026,HORTI,podre descartado no lixo,601,6.92,"R$ 100,71",Betao
+04/01/2026,Açougue,Lata amassada no descarregamento,DIFERENCA CAIXA,7.95,"R$ 98,53",Betao
+06/01/2026,CARNES,Diferenca de peso na balanca,501,1.07,"R$ 19,3",DESCONHECIDO
+07/01/2026,HORTI,Sobra de pao dormido,PAO,4.59,"R$ 158,44",Diego
+10/01/2026,Açougue,quebra de caixa operadora Juliana,101,1.13,"R$ 136,15",Juliana
+12/01/2026,Padaria,Diferenca de peso na balanca,501,11.24,"R$ 64,3",Carlos
+14/01/2026,hortifruti,podre descartado no lixo,201,12.6,"R$ 155,74",Diego
+17/01/2026,Açougue,produto vencido na prateleira sem etiqueta,601,11.76,"R$ 67,76",Carlos
+18/01/2026,frente de caixa,Falta de mercadoria no estoque - suspeita furto,101,8.83,"R$ 138,33",Carlos
+19/01/2026,HORTI,Diferenca de peso na balanca,,10.21,"R$ 89,72",Betao
+20/01/2026,Padaria,produto vencido na prateleira sem etiqueta,102,4.37,"R$ 94,82",Betao
+24/01/2026,CARNES,Diferenca de peso na balanca,DIFERENCA CAIXA,8.44,"R$ 138,11",Juliana
+25/01/2026,Açougue,Sobra de pao dormido,301,6.91,"R$ 36,65",Carlos
+26/01/2026,hortifruti,quebra de caixa operadora Juliana,201,13.82,"R$ 103,01",Betao
+27/01/2026,CARNES,quebra de caixa operadora Juliana,,4.44,"R$ 105,0",Diego
+28/01/2026,DEPOSITO,Falta de mercadoria no estoque - suspeita furto,501,6.62,"R$ 34,91",DESCONHECIDO
+29/01/2026,hortifruti,Falta de mercadoria no estoque - suspeita furto,102,6.29,"R$ 78,46",Diego
+30/01/2026,hortifruti,quebra de caixa operadora Juliana,PAO,7.56,"R$ 133,16",Diego
+04/02/2026,hortifruti,Diferenca de peso na balanca,301,6.72,"R$ 83,32",Juliana
+06/02/2026,hortifruti,Caixa de tomate veio amassada do ceasa,101,5.05,"R$ 99,87",DESCONHECIDO
+12/02/2026,hortifruti,Sobra de pao dormido,,12.16,"R$ 102,82",DESCONHECIDO
+14/02/2026,HORTI,Falta de mercadoria no estoque - suspeita furto,PICANHA,7.41,"R$ 115,65",DESCONHECIDO
+15/02/2026,Açougue,produto vencido na prateleira sem etiqueta,PAO,6.41,"R$ 156,26",Carlos
+16/02/2026,CARNES,produto vencido na prateleira sem etiqueta,PAO,12.36,"R$ 127,01",DESCONHECIDO
+20/02/2026,Açougue,Aparas gordura e osso desossa,101,11.84,"R$ 122,06",Betao
+21/02/2026,DEPOSITO,Diferenca de peso na balanca,PICANHA,5.36,"R$ 127,47",Betao
+25/02/2026,Açougue,Sobra de pao dormido,DIFERENCA CAIXA,11.84,"R$ 149,89",Betao
+27/02/2026,DEPOSITO,quebra de caixa operadora Juliana,DIFERENCA CAIXA,5.2,"R$ 141,55",Juliana
+28/02/2026,CARNES,Aparas gordura e osso desossa,102,5.33,"R$ 60,68",Betao
+01/03/2026,CARNES,podre descartado no lixo,501,3.89,"R$ 73,14",Diego
+03/03/2026,DEPOSITO,Caixa de tomate veio amassada do ceasa,,14.76,"R$ 125,75",DESCONHECIDO
+06/03/2026,HORTI,quebra de caixa operadora Juliana,PAO,14.46,"R$ 80,89",Diego
+11/03/2026,DEPOSITO,produto vencido na prateleira sem etiqueta,DIFERENCA CAIXA,5.35,"R$ 169,49",Carlos
+12/03/2026,DEPOSITO,Aparas gordura e osso desossa,DIFERENCA CAIXA,9.77,"R$ 78,05",DESCONHECIDO
+13/03/2026,Padaria,Sobra de pao dormido,PAO,7.12,"R$ 167,49",Betao
+16/03/2026,HORTI,Caixa de tomate veio amassada do ceasa,301,11.39,"R$ 135,34",Betao
+17/03/2026,Padaria,Falta de mercadoria no estoque - suspeita furto,,12.41,"R$ 75,49",DESCONHECIDO
+18/03/2026,frente de caixa,Aparas gordura e osso desossa,PICANHA,9.77,"R$ 121,17",Carlos
+19/03/2026,DEPOSITO,Falta de mercadoria no estoque - suspeita furto,101,6.0,"R$ 89,12",Diego
+20/03/2026,frente de caixa,Aparas gordura e osso desossa,101,12.1,"R$ 76,21",Juliana
+22/03/2026,frente de caixa,quebra de caixa operadora Juliana,601,3.52,"R$ 55,53",Juliana
+23/03/2026,Padaria,Caixa de tomate veio amassada do ceasa,PAO,1.4,"R$ 86,06",Betao
+25/03/2026,DEPOSITO,Caixa de tomate veio amassada do ceasa,,11.86,"R$ 11,2",DESCONHECIDO
+28/03/2026,frente de caixa,quebra de caixa operadora Juliana,,11.91,"R$ 177,08",Carlos
+29/03/2026,DEPOSITO,produto vencido na prateleira sem etiqueta,DIFERENCA CAIXA,9.92,"R$ 165,32",Betao
