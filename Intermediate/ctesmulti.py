@@ -28,7 +28,7 @@ union = pVendas.execute("""
         WHERE COD_PRODUTO IS NOT NULL
     ), 
     
-    All_Sales AS
+    All_Sales_Up_100 AS
     (
         SELECT
             s.COD_PRODUTO,
@@ -37,13 +37,24 @@ union = pVendas.execute("""
         FROM Sales AS s
         WHERE s.TOTAL_PAGO > 100
     
+    ),
+
+    All_Sales_Down_165 AS
+    (
+        SELECT
+            s.COD_PRODUTO,
+            s.PDV_CAIXA,
+            s.TOTAL_PAGO
+        FROM All_Sales_Up_100 AS s
+        WHERE s.TOTAL_PAGO < 165
+        
     )
 
     SELECT
         s.COD_PRODUTO,
         s.PDV_CAIXA,
         s.TOTAL_PAGO
-    FROM All_Sales AS s
+    FROM All_Sales_Down_165 AS s
     GROUP BY s.COD_PRODUTO;
     
     """)
