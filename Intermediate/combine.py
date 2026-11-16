@@ -20,20 +20,42 @@ pVendas.execute("""
 
 #SUM OVER
 analise_vendas = pVendas.execute("""
-    SELECT 
-        operador,
-        total_pago,
-        status_venda,
-        SUM(total_pago) OVER (PARTITION BY status_venda == 'concluida' ORDER BY total_pago DESC) AS total_operador,
-        AVG(total_pago) OVER (PARTITION BY operador) AS media_operador,
-        LAG(total_pago, 1) OVER (PARTITION BY operador ORDER BY total_pago DESC) as vendas_anterior,
-        LEAD(total_pago, 1) OVER (PARTITION BY operador ORDER BY total_pago DESC) as vendas_seguinte,
-        SUM(total_pago) OVER (ORDER BY total_pago) AS soma_acumulada
-    FROM Vendas;
+    WITH sum_per_operator AS (
+        SELECT 
+            COD_PRODUTO,
+            TOTAL_PAGO,
+            QTD_VENDIDA,
+            OPERADOR,
+            SUM(TOTAL_PAGO) OVER (PARTITION BY OPERADOR ORDER BY COD_PRODUTO DESC) AS TOTAL_ACUMULADO
+        FROM Vendas
+    ),
+
+    sum_per_produto AS (
+        SELECT 
+            COD_PRODUTO,
+            QTD_VENDIDA,
+            TOTAL_ACUMULADO,
+            SUM(QTD_VENDIDA) OVER (PARTITION BY COD_PRODUTO ORDER BY COD_PRODUTO) AS TOTAL_ACUMULADO_QT
+        FROM sum_per_operator
+        GROUP BY COD_PRODUTO
+    )
+
+    
+    SELECT
+        COD_PRODUTO,
+        TOTAL_ACUMULADO,
+        TOTAL_ACUMULADO_QT,
+
+        RANK() OVER (
+            ORDER BY TOTAL_ACUMULADO DESC
+        ) AS RK
+        
+    FROM sum_per_produto;
+        
     """)
 
 av = pd.DataFrame(
-    analise_vendas.fetchmany(20),
+    analise_vendas.fetchmany(5),
     columns=[col[0] for col in analise_vendas.description]
 )
 
