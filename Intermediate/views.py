@@ -54,7 +54,7 @@ print(existing_views)
 
 
 #VIEWS CONCLUIDAS
-vv = pVendas.execute("""
+pVendas.execute("""
     CREATE VIEW v_vendas AS
     SELECT
         OPERADOR,
@@ -106,8 +106,8 @@ pVendas.execute("""
 
 """)
 
+#create connection
 conn = pVendas.connection
-
 
 
 
