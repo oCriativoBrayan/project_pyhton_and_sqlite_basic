@@ -21,12 +21,40 @@ if 'db_compras' not in attached:
         ATTACH DATABASE 'DB/silver_Compras.db' AS db_compras;
     """)
 
-#create an index on the PDV_CAIXA
+#create an index on the STATUS_VENDA
 pVendas.execute("""
     CREATE INDEX IF NOT EXISTS idx_vendas_status_operador
-    ON Vendas(STATUS_VENDA, OPERADOR);
+    ON Vendas(STATUS_VENDA, OPERADOR)
+    WHERE STATUS_VENDA = 'ESTORNADA';
 """)
 
+#Create and index on te ID_TRANSACAO
+pVendas.execute("""
+    CREATE UNIQUE INDEX idx_vendas_cod_prod
+    ON Vendas(ID_TRANSACAO)
+    WHERE STATUS_VENDA = 'CONCLUIDA';
+""")
+
+print('------------------ INDEX ID_TRANSACAO --------------')
+
+
+print('-- IDX PRAGMA --')
+print(pVendas.execute("""
+    PRAGMA index_info('idx_vendas_status_operador');
+""").fetchall())
+
+print('-- IDX ID_TRANSACAO = 9****5 --')
+print(pVendas.execute("""
+    EXPLAIN QUERY PLAN
+    SELECT *
+    FROM Vendas
+    WHERE ID_TRANSACAO = 900005;
+""").fetchall())
+
+
+
+
+print('------------------DROP--------------')
 pVendas.execute("""
     DROP VIEW IF EXISTS vendas_estornada;
 """)
@@ -52,6 +80,10 @@ existing_views = pVendas.execute("""
 
 print(existing_views)
 
+print('drop doing')
+
+
+print('------------------VIEWS--------------')
 
 #VIEWS CONCLUIDAS
 pVendas.execute("""
@@ -106,9 +138,13 @@ pVendas.execute("""
 
 """)
 
+print('consult doing')
+
+
+print('------------------CONSULT DATA--------------')
+
 #create connection
 conn = pVendas.connection
-
 
 
 #called the view concluidas
